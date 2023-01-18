@@ -22,7 +22,8 @@ function Todos() {
         {todos.map((todo)=>{
           return(
           <li>
-            <a href={`${todo._id}`} >{todo.description}</a>
+            <a href={`${todo._id}`} ><h3 className={`${todo.complete?'completed':''}`}>{todo.description}</h3></a>
+
           </li>)
         })}
       </ul>
