@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseURL='http://localhost:3001/todos';
+const baseURL='https://backend-todos-neml.onrender.com/todos'
+// const baseURL='http://localhost:3001/todos';
 
 //Show all
 export const getTodos=()=>{

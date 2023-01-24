@@ -1,4 +1,4 @@
-import Todo from './Todo';
+import { Link } from 'react-router-dom';
 import {getTodos} from '../services/todos-api'
 import {useState, useEffect} from 'react'
 import Create from './CreateTodo'
@@ -22,7 +22,7 @@ function Todos() {
         {todos.map((todo)=>{
           return(
           <li>
-            <a href={`${todo._id}`} ><h3 className={`${todo.complete?'completed':''}`}>{todo.description}</h3></a>
+            <Link to={`/${todo._id}`} ><h3 className={`${todo.complete?'completed':''}`}>{todo.description}</h3></Link>
 
           </li>)
         })}
